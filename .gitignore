@@ -1,0 +1,22 @@
+# Kram, den die Werkzeuge so erzeugen
+#####################################
+# ReSharper
+_ReSharper.NerdGolfTracker
+*.ReSharper.user
+
+# FinalBuilder
+NerdGolfTracker.fb8lck
+NerdGolfTracker.fbl8
+NerdGolfTracker.fbpInf
+
+# Visual Studio
+*DotSettings.user
+*/bin
+*/obj
+.vs
+
+
+# NUnit-GUI
+*VisualState.xml
+reports
+*/TestResult.xml
