@@ -24,8 +24,15 @@ namespace UnitTests.Operationen
         [TestMethod]
         public void GibtSchlagzahlenAus()
         {
-            _scorecardStub.Setup(scorecard => scorecard.AnzahlSchlaege).Returns(1);
-            Assert.IsTrue(_schlagausgabe.FuehreAus(_scorecardStub.Object).Contains("1 Schlag"));
+            _scorecardStub.Setup(scorecard => scorecard.AnzahlSchlaegeAktuellesLoch).Returns(1);
+            StringAssert.Contains(_schlagausgabe.FuehreAus(_scorecardStub.Object), "1 Schlag");
+        }
+        [TestMethod]
+        public void GibtSchlagzahlenPluralAus()
+        {
+            int schlaege = 2;
+            _scorecardStub.Setup(scorecard => scorecard.AnzahlSchlaegeAktuellesLoch).Returns(schlaege);
+            StringAssert.Contains(_schlagausgabe.FuehreAus(_scorecardStub.Object), schlaege.ToString() + " Schlaege");
         }
 
         [TestMethod]
