@@ -88,17 +88,35 @@ namespace AcceptanceTests.Features
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Allgemeine Hilfe")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Gut formatierte Hilfe")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Hilfe")]
-        public virtual void AllgemeineHilfe()
+        public virtual void GutFormatierteHilfe()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Allgemeine Hilfe", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Gut formatierte Hilfe", null, ((string[])(null)));
 #line 3
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 4
  testRunner.When("ich die Hilfe aufrufe", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 5
+ testRunner.Then("zeigt der NerdGolfTracker die Hilfe zu jedem Kommando in einer separaten Zeile an" +
+                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Allgemeine Hilfe")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Hilfe")]
+        public virtual void AllgemeineHilfe()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Allgemeine Hilfe", null, ((string[])(null)));
+#line 7
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 8
+ testRunner.When("ich die Hilfe aufrufe", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 9
  testRunner.Then("zeigt der NerdGolfTracker seine Benutzung an", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -107,12 +125,12 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void HilfeZuKommandos(string kommando, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Hilfe zu Kommandos", null, exampleTags);
-#line 7
+#line 11
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 8
+#line 12
  testRunner.When("ich die Hilfe aufrufe", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 9
+#line 13
  testRunner.Then(string.Format("erklärt der NerdGolfTracker das Kommando \"{0}\"", kommando), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -125,7 +143,7 @@ this.ScenarioInitialize(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:kommando", "Hilfe")]
         public virtual void HilfeZuKommandos_Hilfe()
         {
-#line 7
+#line 11
 this.HilfeZuKommandos("Hilfe", ((string[])(null)));
 #line hidden
         }
@@ -137,7 +155,7 @@ this.HilfeZuKommandos("Hilfe", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:kommando", "Schlage Ball")]
         public virtual void HilfeZuKommandos_SchlageBall()
         {
-#line 7
+#line 11
 this.HilfeZuKommandos("Schlage Ball", ((string[])(null)));
 #line hidden
         }
@@ -149,7 +167,7 @@ this.HilfeZuKommandos("Schlage Ball", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:kommando", "Naechstes Loch")]
         public virtual void HilfeZuKommandos_NaechstesLoch()
         {
-#line 7
+#line 11
 this.HilfeZuKommandos("Naechstes Loch", ((string[])(null)));
 #line hidden
         }

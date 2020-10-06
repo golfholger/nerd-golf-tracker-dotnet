@@ -39,12 +39,21 @@ namespace AkzeptanzTests
         {
             _antwort = _tracker.StandardOutput.ReadLine();
             while (_tracker.StandardOutput.Peek() >= 0)
-                _antwort += _tracker.StandardOutput.ReadLine();
+                _antwort += System.Environment.NewLine + _tracker.StandardOutput.ReadLine();
         }
 
         public void AssertThatAntwortContains(string format, params object[] objects)
         {
             StringAssert.Contains(_antwort, string.Format(format, objects));
+        }
+
+        public void AssertThatBulletPointsAreProperlyFormated()
+        {
+            var splittedString = _antwort.Split('*');
+            for (int i = 0; i < splittedString.Length - 1; i++)
+            {
+                Assert.IsTrue(splittedString[i].EndsWith(System.Environment.NewLine+ " "));
+            }
         }
     }
 }

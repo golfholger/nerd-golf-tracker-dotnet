@@ -18,6 +18,12 @@ namespace AkzeptanzTests.Bindings
             _driver.EmpfangeAnweisung("Hilfe");
         }
 
+        [Then(@"zeigt der NerdGolfTracker die Hilfe zu jedem Kommando in einer separaten Zeile an")]
+        public void ThenZeigtDerNerdGolfTrackerDieHilfeZuJedemKommandoInEinerSeparatenZeileAn()
+        {
+            _driver.AssertThatBulletPointsAreProperlyFormated();
+        }
+
         [Then(@"zeigt der NerdGolfTracker seine Benutzung an")]
         public void PruefeHilfeZurBenutzung()
         {
