@@ -35,5 +35,14 @@ namespace UnitTests
             _scorecard.SchliesseLochAb();
             Assert.AreEqual(_scorecard.Lochnummer, 2);
         }
+
+        [TestMethod]
+        public void ResetSchlagzahlBeiLochwechsel()
+        {
+            _scorecard.ErhoeheAnzahlSchlaege();
+            Assert.AreEqual(_scorecard.AnzahlSchlaegeAktuellesLoch, 1);
+            _scorecard.SchliesseLochAb();
+            Assert.AreEqual(_scorecard.AnzahlSchlaegeAktuellesLoch, 0);
+        }
     }
 }

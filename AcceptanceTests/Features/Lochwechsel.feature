@@ -1,6 +1,5 @@
 Feature: Lochwechsel
 
-@ignore
 Scenario: Schlagzahl zuruecksetzen
 	Given ich habe den Ball einmal geschlagen
 	When ich zum naechsten Loch gehe
