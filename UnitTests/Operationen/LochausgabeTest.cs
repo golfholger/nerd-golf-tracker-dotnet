@@ -13,7 +13,7 @@ namespace UnitTests.Operationen
         {
             var scorecardStub = new Mock<Scorecard>();
             scorecardStub.Setup(scorecard => scorecard.Lochnummer).Returns(2);
-            Assert.IsTrue(new Lochausgabe().FuehreAus(scorecardStub.Object).Contains("auf dem 2.Loch"));
+            Assert.IsTrue(new Lochausgabe().FuehreAus(scorecardStub.Object).Contains("auf dem 2. Loch"));
         }
     }
 }
