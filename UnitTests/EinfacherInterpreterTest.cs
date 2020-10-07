@@ -15,8 +15,15 @@ namespace UnitTests
             FindetOperation("Schlage Ball", typeof(Schlag));
             FindetOperation("Hilfe", typeof(Hilfe));
         }
+		
+		[TestMethod]
+		public void UnbekannteEingabe()
+		{
+			Interpreter interpreter = new EinfacherInterpreter();
+			Assert.IsNull(interpreter.OperationFuer("Unbekannte Eingabe"));
+		}
 
-        public void FindetOperation(string kommando, Type operationstyp)
+		public void FindetOperation(string kommando, Type operationstyp)
         {
             Interpreter interpreter = new EinfacherInterpreter();
             Assert.IsInstanceOfType(interpreter.OperationFuer(kommando), operationstyp);

@@ -64,6 +64,7 @@
     <Compile Include="Bindings\LochwechselSteps.cs" />
     <Compile Include="Bindings\SchlaegeZaehlenSteps.cs" />
     <Compile Include="Bindings\TrackerDriverFixture.cs" />
+    <Compile Include="Bindings\UnbekannteEingabeSteps.cs" />
     <Compile Include="Features\Ball schlagen.feature.cs" />
     <Compile Include="Features\Begruessung.feature.cs" />
     <Compile Include="Features\Hilfe.feature.cs" />
