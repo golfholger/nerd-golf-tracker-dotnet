@@ -8,6 +8,6 @@ namespace NerdGolfTracker.Befehle
 
         public Operation Operation => new Zwischenergebnis();
 
-        public string Erklaerung => "Zeigt dir das aktuelle Zwischenergebnis an";
+        public string Erklaerung => "zeigt dir das aktuelle Zwischenergebnis an";
     }
 }
