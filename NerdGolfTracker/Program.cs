@@ -7,6 +7,7 @@ namespace NerdGolfTracker
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
             var tracker = new Tracker(new EinfacherInterpreter(), new Lochbegruessung(new Lochausgabe()));
             Console.WriteLine(tracker.Starte());
             while (true)
