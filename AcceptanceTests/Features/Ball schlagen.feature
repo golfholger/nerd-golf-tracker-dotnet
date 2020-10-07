@@ -12,4 +12,4 @@ Scenario: Schlaege zaehlen
 
 Scenario: Loch anzeigen
 	When ich den Ball einmal schlage
-	Then zaehlt er die Schläge auf dem 1. Loch
+	Then zaehlt er die Schlaege auf dem 1. Loch

@@ -131,7 +131,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 12
  testRunner.When("ich die Hilfe aufrufe", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 13
- testRunner.Then(string.Format("erklärt der NerdGolfTracker das Kommando \"{0}\"", kommando), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("erklaert der NerdGolfTracker das Kommando \"{0}\"", kommando), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
