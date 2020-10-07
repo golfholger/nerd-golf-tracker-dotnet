@@ -39,5 +39,16 @@ namespace UnitTests
 			StringAssert.Contains(actualResult, "keinem gueltigen Befehl");
             StringAssert.Contains(actualResult, "folgende Befehle");
 		}
+        [TestMethod]
+        public void RaiseExitFlag()
+        {
+            var interpreterStub = new Mock<Interpreter>();
+            interpreterStub.Setup(interpreter => interpreter.OperationFuer("Beenden"))
+                .Returns(new NerdGolfTracker.Operationen.Beenden());
+            var tracker = new Tracker(interpreterStub.Object, null);
+            Assert.IsFalse(tracker.BeendenAngefordert);
+            Assert.AreEqual(tracker.ReagiereAuf("Beenden"), "Beende Anwendung");
+            Assert.IsTrue(tracker.BeendenAngefordert);
+        }
 	}
 }

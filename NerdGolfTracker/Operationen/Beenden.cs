@@ -7,7 +7,6 @@ namespace NerdGolfTracker.Operationen
     {
         public string FuehreAus(Scorecard scorecard)
         {
-            System.Environment.Exit(0);
             return "Beende Anwendung";
         }
 
