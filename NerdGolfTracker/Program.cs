@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using NerdGolfTracker.Operationen;
 
 namespace NerdGolfTracker
@@ -13,6 +14,8 @@ namespace NerdGolfTracker
             while (true)
             {
                 var befehl = Console.ReadLine();
+                Debug.Write(befehl);
+                Console.Write(befehl);
                 Console.WriteLine(tracker.ReagiereAuf(befehl));                
             }
         }
