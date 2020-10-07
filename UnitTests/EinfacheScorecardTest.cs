@@ -44,5 +44,16 @@ namespace UnitTests
             _scorecard.SchliesseLochAb();
             Assert.AreEqual(_scorecard.AnzahlSchlaegeAktuellesLoch, 0);
         }
+
+        [TestMethod]
+        public void UndoSchlagTest()
+        {
+            _scorecard.ErhoeheAnzahlSchlaege();
+            Assert.AreEqual(_scorecard.AnzahlSchlaegeAktuellesLoch, 1);
+            Assert.AreEqual(_scorecard.Lochnummer, 1);
+            _scorecard.Undo();
+            Assert.AreEqual(_scorecard.AnzahlSchlaegeAktuellesLoch, 0);
+            Assert.AreEqual(_scorecard.Lochnummer, 1);
+        }
     }
 }

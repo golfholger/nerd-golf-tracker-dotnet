@@ -4,7 +4,7 @@ using System.Runtime.Remoting.Messaging;
 namespace NerdGolfTracker
 {
     public class EinfacheScorecard : Scorecard
-    { 
+    {
         public int AnzahlSchlaegeAktuellesLoch
         {
             get
@@ -15,8 +15,8 @@ namespace NerdGolfTracker
 
         public int Lochnummer { get; private set; }
 
-        public int AnzahlSchlaege 
-        { 
+        public int AnzahlSchlaege
+        {
             get
             {
                 return anzahlSchlaege.Sum();
@@ -39,6 +39,12 @@ namespace NerdGolfTracker
         public void ErhoeheAnzahlSchlaege()
         {
             anzahlSchlaege[Lochnummer - 1]++;
+        }
+
+        public void Undo()
+        {
+            if(anzahlSchlaege[Lochnummer - 1] > 0)
+                anzahlSchlaege[Lochnummer - 1]--;
         }
     }
 }

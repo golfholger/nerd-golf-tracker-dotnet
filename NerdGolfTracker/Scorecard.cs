@@ -12,5 +12,6 @@ namespace NerdGolfTracker
 
         void ErhoeheAnzahlSchlaege();
         void SchliesseLochAb();
-    }
+		void Undo();
+	}
 }
