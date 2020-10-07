@@ -14,6 +14,11 @@ namespace UnitTests
             FindetOperation("Naechstes Loch", typeof(Lochwechsel));
             FindetOperation("Schlage Ball", typeof(Schlag));
             FindetOperation("Hilfe", typeof(Hilfe));
+
+            //Kurzbefehle
+            FindetOperation("S", typeof(Schlag));
+            FindetOperation("N", typeof(Lochwechsel));
+            FindetOperation("H", typeof(Hilfe));
         }
 
         public void FindetOperation(string kommando, Type operationstyp)

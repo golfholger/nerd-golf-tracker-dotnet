@@ -7,7 +7,13 @@ namespace NerdGolfTracker
         public Operation OperationFuer(string kommando)
         {
             var befehle = new AlleBefehle().Befehle();
-            return befehle.Find(befehl => kommando.EndsWith(befehl.Kommando)).Operation;
+
+			foreach (Befehl b in befehle)
+			{
+                if (b.Kommando.StartsWith(kommando))
+                    return b.Operation;
+			}
+            return null;
         }
     }
 }
