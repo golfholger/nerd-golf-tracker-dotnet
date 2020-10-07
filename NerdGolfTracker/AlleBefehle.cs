@@ -3,7 +3,7 @@ using NerdGolfTracker.Befehle;
 
 namespace NerdGolfTracker
 {
-    class AlleBefehle
+    public class AlleBefehle
     {
         public List<Befehl> Befehle()
         {
@@ -12,6 +12,7 @@ namespace NerdGolfTracker
                 new HilfeBefehl(),
                 new LochwechselBefehl(),
                 new SchlagBefehl(),
+                new BeendenBefehl(),
                 new ZwischenErgebnisBefehl()
             };
             return befehle;

@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bindings\BallSchlagenSteps.cs" />
+    <Compile Include="Bindings\BeendenSteps.cs" />
     <Compile Include="Bindings\HilfeSteps.cs" />
     <Compile Include="Bindings\KurzbefehlSteps.cs" />
     <Compile Include="Bindings\LochwechselSteps.cs" />
@@ -67,6 +68,7 @@
     <Compile Include="Bindings\TrackerDriverFixture.cs" />
     <Compile Include="Bindings\UnbekannteEingabeSteps.cs" />
     <Compile Include="Features\Ball schlagen.feature.cs" />
+    <Compile Include="Features\Beenden.feature.cs" />
     <Compile Include="Features\Begruessung.feature.cs" />
     <Compile Include="Features\Hilfe.feature.cs" />
     <Compile Include="Features\Kurzbefehl.feature.cs" />
@@ -80,6 +82,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Features\Ball schlagen.feature" />
+    <None Include="Features\Beenden.feature" />
     <None Include="Features\Begruessung.feature" />
     <None Include="Features\Hilfe.feature" />
     <None Include="Features\Kurzbefehl.feature" />

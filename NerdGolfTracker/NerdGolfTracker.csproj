@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="AlleBefehle.cs" />
     <Compile Include="Befehl.cs" />
+    <Compile Include="Befehle\BeendenBefehl.cs" />
     <Compile Include="Befehle\HilfeBefehl.cs" />
     <Compile Include="Befehle\LochwechselBefehl.cs" />
     <Compile Include="Befehle\SchlagBefehl.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="EinfacheScorecard.cs" />
     <Compile Include="Interpreter.cs" />
     <Compile Include="Operation.cs" />
+    <Compile Include="Operationen\Beenden.cs" />
     <Compile Include="Operationen\Hilfe.cs" />
     <Compile Include="Operationen\Lochausgabe.cs" />
     <Compile Include="Operationen\Lochbegruessung.cs" />
