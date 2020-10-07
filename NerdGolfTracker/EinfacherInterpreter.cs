@@ -8,9 +8,12 @@ namespace NerdGolfTracker
         {
             var befehle = new AlleBefehle().Befehle();
 
-			foreach (Befehl b in befehle)
+            string badString = "∩╗┐"; //possible error due to encoding issues
+            string subkommando = kommando.Replace(badString, "");          
+
+            foreach (Befehl b in befehle)
 			{
-                if (b.Kommando.StartsWith(kommando))
+                if (b.Kommando.StartsWith(subkommando))
                     return b.Operation;
 			}
             return null;
