@@ -19,8 +19,12 @@ namespace UnitTests
             FindetOperation("N", typeof(Lochwechsel));
             FindetOperation("S", typeof(Schlag));
             FindetOperation("H", typeof(Hilfe));
-        }
-		
+
+			//Default
+			FindetOperation("", typeof(Schlag));
+
+		}
+
 		[TestMethod]
 		public void UnbekannteEingabe()
 		{
