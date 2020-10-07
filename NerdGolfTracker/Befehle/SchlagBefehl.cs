@@ -8,6 +8,6 @@ namespace NerdGolfTracker.Befehle
 
         public Operation Operation => new Schlag(new Schlagausgabe(new Lochausgabe()));
 
-        public string Erklaerung => "zaehlt einen Schlag";
+        public string Erklaerung => "zaehlt einen Schlag (Default-Kommando mit Return)";
     }
 }
