@@ -26,7 +26,8 @@ namespace AkzeptanzTests
 
         public void Beende()
         {
-            _tracker.Kill();
+            if (!_tracker.HasExited)
+                _tracker.Kill();
         }
 
         public void EmpfangeAnweisung(string anweisung)
@@ -54,6 +55,11 @@ namespace AkzeptanzTests
             {
                 Assert.IsTrue(splittedString[i].EndsWith(System.Environment.NewLine+ " "));
             }
+        }
+
+        public void AssertThatDriverExited()
+        {
+            Assert.IsTrue(_tracker.HasExited);
         }
     }
 }
