@@ -22,7 +22,7 @@ namespace NerdGolfTracker
 
 			if (operation == null)
 			{
-				var hinweisText = "Die gemachte Eingabe konnte keinem gueltigen Befehl zugeordnet werden, du Nerd!" + System.Environment.NewLine + System.Environment.NewLine;
+				var hinweisText = "Die gemachte Eingabe konnte keinem gueltigen Befehl zugeordnet werden!" + System.Environment.NewLine + System.Environment.NewLine;
 				var hilfeText = new HilfeBefehl().Operation.FuehreAus(_scorecard);
 				return hinweisText + hilfeText;
 			}
