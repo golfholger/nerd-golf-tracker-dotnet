@@ -124,7 +124,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 14
  testRunner.When("ich den Ball einmal schlage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 15
- testRunner.Then("zaehlt er die Schl�ge auf dem 1. Loch", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("zaehlt er die Schlaege auf dem 1. Loch", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

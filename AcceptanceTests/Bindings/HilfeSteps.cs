@@ -30,7 +30,7 @@ namespace AkzeptanzTests.Bindings
             _driver.AssertThatAntwortContains("folgende Befehle");
         }
 
-        [Then(@"erklärt der NerdGolfTracker das Kommando ""(.*)""")]
+        [Then(@"erklaert der NerdGolfTracker das Kommando ""(.*)""")]
         public void PruefeHilfeZuKommando(string kommando)
         {
             _driver.AssertThatAntwortContains("[" + kommando.Substring(0, 1) + "]" + kommando.Substring(1));

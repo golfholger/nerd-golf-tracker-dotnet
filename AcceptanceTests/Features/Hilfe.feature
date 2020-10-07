@@ -10,7 +10,7 @@ Scenario: Allgemeine Hilfe
 
 Scenario Outline: Hilfe zu Kommandos
 	When ich die Hilfe aufrufe
-	Then erklärt der NerdGolfTracker das Kommando "<kommando>"
+	Then erklaert der NerdGolfTracker das Kommando "<kommando>"
 
 	Examples: 
 	| kommando       |
