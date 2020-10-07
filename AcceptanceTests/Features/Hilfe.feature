@@ -13,7 +13,10 @@ Scenario Outline: Hilfe zu Kommandos
 	Then erklaert der NerdGolfTracker das Kommando "<kommando>"
 
 	Examples: 
-	| kommando       |
-	| Hilfe          |
-	| Schlage Ball   |
-	| Naechstes Loch |
+	| kommando         |
+	| Beenden          |
+	| Hilfe            |
+	| Schlage Ball     |
+	| Naechstes Loch   |
+	| Zwischenergebnis |
+	| Undo             |
