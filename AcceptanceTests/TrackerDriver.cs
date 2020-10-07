@@ -9,7 +9,7 @@ namespace AkzeptanzTests
     public class TrackerDriver
     {
         private Process _tracker;
-        private string _antwort;
+        public string _antwort;
 
         public void Starte()
         {
