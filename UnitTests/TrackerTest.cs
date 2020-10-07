@@ -36,7 +36,7 @@ namespace UnitTests
 			var interpreterStub = new Mock<Interpreter>();
 			interpreterStub.Setup(interpreter => interpreter.OperationFuer("Unbekannte Eingabe")).Returns<Operation>(null);
 			var actualResult = new Tracker(interpreterStub.Object, null).ReagiereAuf("Unbekannte Eingabe");
-			Assert.IsTrue(actualResult.Contains("keinem gültigen Befehl"));
+			Assert.IsTrue(actualResult.Contains("keinem gueltigen Befehl"));
 			Assert.IsTrue(actualResult.Contains("folgende Befehle"));
 		}
 	}
