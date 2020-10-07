@@ -10,7 +10,18 @@ namespace NerdGolfTracker.Operationen
     {
         public string FuehreAus(Scorecard scorecard)
         {
-            return "Dein aktuelles Zwischenergebnis: " + scorecard.AnzahlSchlaege.ToString();
+            string outputString = "Dein aktuelles Zwischenergebnis: " + scorecard.AnzahlSchlaege.ToString();
+
+            if(scorecard.AnzahlSchlaege == 1)
+            {
+                outputString += " Schlag";
+            }
+            else
+            {
+                outputString += " Schlaege";
+            }
+
+            return outputString;
         }
     }
 }

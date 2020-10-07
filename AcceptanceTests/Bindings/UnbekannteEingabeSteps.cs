@@ -21,7 +21,7 @@ namespace AkzeptanzTests.Bindings
         [Then(@"weist mich der Nerd Tracker auf eine unbekannte Eingabe hin")]
         public void PruefeUnbekannteEingabeHinweis()
         {
-            _driver.AssertThatAntwortContains("Die gemachte Eingabe konnte keinem gueltigen Befehl zugeordnet werden, du Nerd!");
+            _driver.AssertThatAntwortContains("Die gemachte Eingabe konnte keinem gueltigen Befehl zugeordnet werden!");
         }
 
         [Then(@"weist mich der Tracker auf die Hilfe hin")]

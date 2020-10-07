@@ -25,14 +25,21 @@ namespace UnitTests.Operationen
         [TestMethod]
         public void ZwischenergebnisOhneSchlag()
         {
-            Assert.AreEqual("Dein aktuelles Zwischenergebnis: 0", _zwischenergebnis.FuehreAus(_scorecardMock.Object));
+            Assert.AreEqual("Dein aktuelles Zwischenergebnis: 0 Schlaege", _zwischenergebnis.FuehreAus(_scorecardMock.Object));
         }
 
         [TestMethod]
         public void ZwischenergebnisMitEinemSchlag()
         {
             _scorecardMock.Setup(x => x.AnzahlSchlaege).Returns(1);
-            Assert.AreEqual("Dein aktuelles Zwischenergebnis: 1", _zwischenergebnis.FuehreAus(_scorecardMock.Object));
+            Assert.AreEqual("Dein aktuelles Zwischenergebnis: 1 Schlag", _zwischenergebnis.FuehreAus(_scorecardMock.Object));
+        }
+
+        [TestMethod]
+        public void ZwischenergebnisMitZweiSchlaegen()
+        {
+            _scorecardMock.Setup(x => x.AnzahlSchlaege).Returns(2);
+            Assert.AreEqual("Dein aktuelles Zwischenergebnis: 2 Schlaege", _zwischenergebnis.FuehreAus(_scorecardMock.Object));
         }
     }
 }
