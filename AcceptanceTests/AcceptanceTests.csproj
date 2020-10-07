@@ -67,6 +67,7 @@
     <Compile Include="Bindings\SchlaegeZaehlenSteps.cs" />
     <Compile Include="Bindings\TrackerDriverFixture.cs" />
     <Compile Include="Bindings\UnbekannteEingabeSteps.cs" />
+    <Compile Include="Bindings\UndoSteps.cs" />
     <Compile Include="Features\Ball schlagen.feature.cs" />
     <Compile Include="Features\Beenden.feature.cs" />
     <Compile Include="Features\Begruessung.feature.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Features\Lochwechsel.feature.cs" />
     <Compile Include="Features\Unbekannte Eingabe.feature.cs" />
     <Compile Include="Bindings\ZwischenergebnisAnzeigenSteps.cs" />
+    <Compile Include="Features\Undo.feature.cs" />
     <Compile Include="Features\Zwischenergebnis anzeigen.feature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TrackerDriver.cs" />
@@ -88,6 +90,7 @@
     <None Include="Features\Kurzbefehl.feature" />
     <None Include="Features\Lochwechsel.feature" />
     <None Include="Features\Unbekannte Eingabe.feature" />
+    <None Include="Features\Undo.feature" />
     <None Include="Features\Zwischenergebnis anzeigen.feature" />
     <None Include="packages.config" />
   </ItemGroup>

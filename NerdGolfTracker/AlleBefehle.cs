@@ -13,7 +13,8 @@ namespace NerdGolfTracker
                 new LochwechselBefehl(),
                 new SchlagBefehl(),
                 new BeendenBefehl(),
-                new ZwischenErgebnisBefehl()
+                new ZwischenErgebnisBefehl(),
+                new UndoBefehl()
             };
             return befehle;
         }
