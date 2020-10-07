@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 
@@ -23,17 +24,18 @@ namespace NerdGolfTracker
             }
         }
 
-        int[] anzahlSchlaege;
+        List<int> anzahlSchlaege = new List<int>();
 
         public EinfacheScorecard()
         {
             Lochnummer = 1;
-            anzahlSchlaege = new int[18];
+            anzahlSchlaege.Add(0);
         }
 
         public void SchliesseLochAb()
         {
             Lochnummer++;
+            anzahlSchlaege.Add(0);
         }
 
         public void ErhoeheAnzahlSchlaege()
