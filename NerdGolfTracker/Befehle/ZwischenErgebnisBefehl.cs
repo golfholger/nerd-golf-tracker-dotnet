@@ -4,7 +4,7 @@ namespace NerdGolfTracker.Befehle
 {
     public class ZwischenErgebnisBefehl : Befehl
     {
-        public string Kommando => "[Z]wischenergebnis";
+        public string Kommando => "Zwischenergebnis";
 
         public Operation Operation => new Zwischenergebnis();
 

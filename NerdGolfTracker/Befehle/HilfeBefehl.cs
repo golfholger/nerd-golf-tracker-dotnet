@@ -4,7 +4,7 @@ namespace NerdGolfTracker.Befehle
 {
     public class HilfeBefehl : Befehl
     {
-        public string Kommando => "[H]ilfe";
+        public string Kommando => "Hilfe";
 
         public Operation Operation => new Hilfe();
 

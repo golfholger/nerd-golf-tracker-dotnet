@@ -33,7 +33,7 @@ namespace AkzeptanzTests.Bindings
         [Then(@"erklärt der NerdGolfTracker das Kommando ""(.*)""")]
         public void PruefeHilfeZuKommando(string kommando)
         {
-            _driver.AssertThatAntwortContains(kommando);
+            _driver.AssertThatAntwortContains("[" + kommando.Substring(0, 1) + "]" + kommando.Substring(1));
         }
     }
 }
