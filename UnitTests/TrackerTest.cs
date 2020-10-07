@@ -29,5 +29,15 @@ namespace UnitTests
             var tracker = new Tracker(null, startoperationStub.Object);
             Assert.AreEqual(tracker.Starte(), "Ausgabe");
         }
-    }
+
+		[TestMethod]
+		public void GibtErgebnisDerUnbekanntenEingabeZurueck()
+		{
+			var interpreterStub = new Mock<Interpreter>();
+			interpreterStub.Setup(interpreter => interpreter.OperationFuer("Unbekannte Eingabe")).Returns<Operation>(null);
+			var actualResult = new Tracker(interpreterStub.Object, null).ReagiereAuf("Unbekannte Eingabe");
+			StringAssert.Contains(actualResult, "keinem gueltigen Befehl");
+            StringAssert.Contains(actualResult, "folgende Befehle");
+		}
+	}
 }

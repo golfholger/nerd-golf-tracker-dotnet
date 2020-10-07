@@ -1,4 +1,7 @@
-﻿namespace NerdGolfTracker
+﻿using NerdGolfTracker.Befehle;
+using System.Runtime.CompilerServices;
+
+namespace NerdGolfTracker
 {
     public class Tracker
     {
@@ -15,7 +18,18 @@
 
         public string ReagiereAuf(string kommando)
         {
-            return _interpreter.OperationFuer(kommando).FuehreAus(_scorecard);
+			var operation = _interpreter.OperationFuer(kommando);
+
+			if (operation == null)
+			{
+				var hinweisText = "Die gemachte Eingabe konnte keinem gueltigen Befehl zugeordnet werden!" + System.Environment.NewLine + System.Environment.NewLine;
+				var hilfeText = new HilfeBefehl().Operation.FuehreAus(_scorecard);
+				return hinweisText + hilfeText;
+			}
+			else
+			{
+				return operation.FuehreAus(_scorecard);
+			}
         }
 
         public string Starte()
