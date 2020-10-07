@@ -4,7 +4,7 @@ namespace NerdGolfTracker.Befehle
 {
     public class SchlagBefehl : Befehl
     {
-        public string Kommando => "Schlage Ball";
+        public string Kommando => "[S]chlage Ball";
 
         public Operation Operation => new Schlag(new Schlagausgabe(new Lochausgabe()));
 
