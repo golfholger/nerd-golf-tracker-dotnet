@@ -1,4 +1,5 @@
 ﻿using NerdGolfTracker.Befehle;
+using NerdGolfTracker.Operationen;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -21,7 +22,8 @@ namespace NerdGolfTracker
                 if (b.Kommando.StartsWith(subkommando))
                     return b.Operation;
 			}
-            return null;
+
+            return new UnbekannteOperation();
         }
     }
 }

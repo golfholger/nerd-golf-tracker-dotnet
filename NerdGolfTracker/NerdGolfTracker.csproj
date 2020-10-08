@@ -55,6 +55,7 @@
     <Compile Include="EinfacheScorecard.cs" />
     <Compile Include="Interpreter.cs" />
     <Compile Include="Operation.cs" />
+    <Compile Include="Operationen\UnbekannteOperation.cs" />
     <Compile Include="Operationen\Beenden.cs" />
     <Compile Include="Operationen\Hilfe.cs" />
     <Compile Include="Operationen\Lochausgabe.cs" />
