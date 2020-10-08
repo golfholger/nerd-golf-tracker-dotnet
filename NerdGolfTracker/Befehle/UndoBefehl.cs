@@ -6,7 +6,7 @@ namespace NerdGolfTracker.Befehle
     {
         public string Kommando => "Undo";
 
-        public Operation Operation => new Undo(new Schlagausgabe(new Lochausgabe()));
+        public Operation Operation => new KombiOperation(new Undo(), new Schlagausgabe(), new Lochausgabe());
 
         public string Erklaerung => "macht einen Schlag rueckgaengig";
     }

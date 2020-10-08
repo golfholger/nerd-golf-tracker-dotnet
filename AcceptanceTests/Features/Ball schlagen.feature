@@ -1,14 +1,13 @@
 Feature: Ball schlagen
 
-Scenario: Schlaege zaehlen
+Scenario: Einen Schlag zaehlen
 	When ich den Ball einmal schlage
 	Then zaehlt der NerdGolfTracker 1 Schlag
-	
-	When ich den Ball noch einmal schlage
-	Then zaehlt er 2 Schlaege
 
+Scenario: Einen zweiten Schlag zaehlen
+	Given ich habe den Ball bereits einmal geschlagen
 	When ich den Ball noch einmal schlage
-	Then zaehlt er 3 Schlaege
+	Then zaehlt der NerdGolfTracker 2 Schlaege
 
 Scenario: Loch anzeigen
 	When ich den Ball einmal schlage
