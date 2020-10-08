@@ -10,15 +10,12 @@ namespace UnitTests.Operationen
     public class ZwischenergebnisTest
     {
         private Mock<Scorecard> _scorecardMock;
-        private Mock<Operation> _folgeOperationMock;
-        private Mock<Schlag> _schlagMock;
         private Zwischenergebnis _zwischenergebnis;
 
         [TestInitialize]
         public void Init()
         {
             _scorecardMock = new Mock<Scorecard>();
-            _folgeOperationMock = new Mock<Operation>();
             _zwischenergebnis = new Zwischenergebnis();
         }
 
