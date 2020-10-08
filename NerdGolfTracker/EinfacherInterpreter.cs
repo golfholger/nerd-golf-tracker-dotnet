@@ -1,4 +1,5 @@
 ﻿using NerdGolfTracker.Befehle;
+using NerdGolfTracker.Operationen;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -26,7 +27,8 @@ namespace NerdGolfTracker
                     }
                 }
 			}
-            return null;
+
+            return new UnbekannteOperation();
         }
     }
 }

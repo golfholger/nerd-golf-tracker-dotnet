@@ -27,13 +27,8 @@ namespace UnitTests
 			FindetOperation("Z", typeof(Zwischenergebnis));
 			FindetOperation("U", typeof(Undo));
 			FindetOperation("", typeof(Schlag));
-		}
 
-		[TestMethod]
-		public void UnbekannteEingabe()
-		{
-			Interpreter interpreter = new EinfacherInterpreter();
-			Assert.IsNull(interpreter.OperationFuer("Unbekannte Eingabe"));
+			FindetOperation("Unbekannte Operation", typeof(UnbekannteOperation));
 		}
 
 		public void FindetOperation(string kommando, Type operationstyp)

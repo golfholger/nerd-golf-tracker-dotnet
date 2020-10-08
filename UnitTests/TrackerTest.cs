@@ -1,5 +1,6 @@
 ﻿using Moq;
 using NerdGolfTracker;
+using NerdGolfTracker.Operationen;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTests
@@ -34,7 +35,8 @@ namespace UnitTests
 		public void GibtErgebnisDerUnbekanntenEingabeZurueck()
 		{
 			var interpreterStub = new Mock<Interpreter>();
-			interpreterStub.Setup(interpreter => interpreter.OperationFuer("Unbekannte Eingabe")).Returns<Operation>(null);
+			interpreterStub.Setup(interpreter => interpreter.OperationFuer("Unbekannte Eingabe")).Returns(
+				new NerdGolfTracker.Operationen.UnbekannteOperation());
 			var actualResult = new Tracker(interpreterStub.Object, null).ReagiereAuf("Unbekannte Eingabe");
 			StringAssert.Contains(actualResult, "keinem gueltigen Befehl");
             StringAssert.Contains(actualResult, "folgende Befehle");
