@@ -1,10 +1,11 @@
 using NerdGolfTracker.Operationen;
+using System.Collections.Generic;
 
 namespace NerdGolfTracker.Befehle
 {
     public class BeendenBefehl : Befehl
     {
-        public string Kommando => "Beenden";
+        public List<string> Kommandos => new List<string>(new string[] {"Beenden" , "B"});
 
         public Operation Operation => new Beenden();
 

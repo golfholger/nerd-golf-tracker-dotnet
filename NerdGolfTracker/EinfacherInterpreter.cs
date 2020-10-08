@@ -18,8 +18,13 @@ namespace NerdGolfTracker
 
             foreach (Befehl b in befehle)
 			{
-                if (b.Kommando.StartsWith(subkommando))
-                    return b.Operation;
+                foreach( string Kommando in b.Kommandos)
+                {
+                    if (Kommando.Equals(subkommando))
+                    {
+                        return b.Operation;
+                    }
+                }
 			}
             return null;
         }

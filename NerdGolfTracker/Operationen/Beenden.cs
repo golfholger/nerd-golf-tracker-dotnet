@@ -13,7 +13,7 @@ namespace NerdGolfTracker.Operationen
 
         private string HilfstextFuer(Befehl befehl)
         {
-            return $" * \"{befehl.Kommando}\" {befehl.Erklaerung}";
+            return $" * \"{befehl.Kommandos[0]}\" {befehl.Erklaerung}";
         }
     }
 }

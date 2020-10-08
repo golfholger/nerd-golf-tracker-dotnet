@@ -1,10 +1,11 @@
 using NerdGolfTracker.Operationen;
+using System.Collections.Generic;
 
 namespace NerdGolfTracker.Befehle
 {
     public class ZwischenErgebnisBefehl : Befehl
     {
-        public string Kommando => "Zwischenergebnis";
+        public List<string> Kommandos => new List<string>(new string[] { "Zwischenergebnis", "Z" });
 
         public Operation Operation => new Zwischenergebnis();
 

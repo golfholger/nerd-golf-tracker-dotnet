@@ -1,10 +1,11 @@
 using NerdGolfTracker.Operationen;
+using System.Collections.Generic;
 
 namespace NerdGolfTracker.Befehle
 {
     public class UndoBefehl : Befehl
     {
-        public string Kommando => "Undo";
+        public List<string> Kommandos => new List<string>(new string[] { "Undo", "U" });
 
         public Operation Operation => new KombiOperation(new Undo(), new Schlagausgabe(), new Lochausgabe());
 
