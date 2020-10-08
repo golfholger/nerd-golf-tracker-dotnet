@@ -4,7 +4,7 @@ namespace NerdGolfTracker.Operationen
     {
         private readonly Operation _folgeOperation;
 
-        public Schlag(Operation folgeOperation)
+        public Schlag(Operation folgeOperation = null)
         {
             _folgeOperation = folgeOperation;
         }
@@ -12,7 +12,12 @@ namespace NerdGolfTracker.Operationen
         public string FuehreAus(Scorecard scorecard)
         {
             scorecard.ErhoeheAnzahlSchlaege();
-            return _folgeOperation.FuehreAus(scorecard);
+            if(_folgeOperation != null)
+			{
+                return _folgeOperation.FuehreAus(scorecard);
+            }
+
+            return "";
         }
     }
 }

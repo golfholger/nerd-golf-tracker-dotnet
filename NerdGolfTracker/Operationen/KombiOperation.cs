@@ -8,18 +8,18 @@ namespace NerdGolfTracker.Operationen
 {
 	public class KombiOperation : Operation
 	{
-		private Operation[] _operationen;
+		public Operation[] Operationen { private set; get; }
 
 		public KombiOperation(params Operation[] operationen)
 		{
-			_operationen = operationen;
+			Operationen = operationen;
 		}
 
 		public string FuehreAus(Scorecard scorecard)
 		{
 			string result = "";
 
-			foreach(Operation operation in _operationen)
+			foreach(Operation operation in Operationen)
 			{
 				result += operation.FuehreAus(scorecard);
 			}
