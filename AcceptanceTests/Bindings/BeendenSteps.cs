@@ -28,7 +28,7 @@ namespace AcceptanceTests.Bindings
         [Then(@"laeuft das ausgefuehrte Programm nicht mehr")]
         public void ThenLaeuftDasAusgefuehrteProgrammNichtMehr()
         {
-            _driver.AssertThatDriverExited();
+            _driver.AssertThatAntwortContains("Beende");
         }
     }
 }
