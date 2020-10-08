@@ -9,7 +9,6 @@ namespace UnitTests.Operationen
     public class LochwechselTest
     {
         private Mock<Scorecard> _scorecardMock;
-        private Mock<Operation> _folgeOperationMock;
         private Mock<Operation> _schlagOperationMock;
 
         private Lochwechsel _lochwechsel;
@@ -18,9 +17,8 @@ namespace UnitTests.Operationen
         public void Init()
         {
             _scorecardMock = new Mock<Scorecard>();
-            _folgeOperationMock = new Mock<Operation>();
             _schlagOperationMock = new Mock<Operation>();
-            _lochwechsel = new Lochwechsel(_folgeOperationMock.Object);
+            _lochwechsel = new Lochwechsel();
         }
 
         [TestMethod]
@@ -28,13 +26,6 @@ namespace UnitTests.Operationen
         {
             _lochwechsel.FuehreAus(_scorecardMock.Object);
             _scorecardMock.Verify(scorecard => scorecard.SchliesseLochAb());
-        }
-
-        [TestMethod]
-        public void FuehrtFolgeOperationMitAus()
-        {
-            _lochwechsel.FuehreAus(_scorecardMock.Object);
-            _folgeOperationMock.Verify(operation => operation.FuehreAus(_scorecardMock.Object));
         }
 
         [TestMethod]

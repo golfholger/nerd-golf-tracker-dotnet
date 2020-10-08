@@ -6,7 +6,7 @@ namespace NerdGolfTracker.Befehle
     {
         public string Kommando => "Naechstes Loch";
 
-        public Operation Operation => new Lochwechsel(new Lochbegruessung(new Lochausgabe()));
+        public Operation Operation => new KombiOperation(new Lochwechsel(), new Lochbegruessung(), new Lochausgabe());
 
         public string Erklaerung => "bringt Dich zum naechsten Loch";
     }
