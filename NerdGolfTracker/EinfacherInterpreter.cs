@@ -11,9 +11,6 @@ namespace NerdGolfTracker
         {
             var befehle = new AlleBefehle().Befehle();
 
-			if (kommando == "")
-				return new SchlagBefehl().Operation;
-
             string badString = "∩╗┐"; //possible error due to encoding issues
             string subkommando = kommando.Replace(badString, "");          
 
