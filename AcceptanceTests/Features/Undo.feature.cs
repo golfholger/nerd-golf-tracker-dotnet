@@ -101,13 +101,11 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
  testRunner.And("ich den Ball noch einmal schlage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 6
- testRunner.And("ich den Schlag rueckgaengig mache", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("zaehlt der NerdGolfTracker 2 Schlaege", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 7
- testRunner.Then("zaehlt der NerdGolfTracker 1 Schlag", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 9
  testRunner.When("ich den Schlag rueckgaengig mache", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 10
- testRunner.Then("zaehlt der NerdGolfTracker 0 Schlaege", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 8
+ testRunner.Then("zaehlt der NerdGolfTracker 1 Schlag", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
