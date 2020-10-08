@@ -56,10 +56,5 @@ namespace AkzeptanzTests
                 Assert.IsTrue(splittedString[i].EndsWith(System.Environment.NewLine+ " "));
             }
         }
-
-        public void AssertThatDriverExited()
-        {
-            Assert.IsTrue(_tracker.HasExited);
-        }
     }
 }

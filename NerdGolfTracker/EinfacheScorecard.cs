@@ -6,6 +6,9 @@ namespace NerdGolfTracker
 {
     public class EinfacheScorecard : Scorecard
     {
+        List<int> anzahlSchlaege = new List<int>();
+        bool _spielAbgeschlossen = false;
+
         public int AnzahlSchlaegeAktuellesLoch
         {
             get
@@ -24,7 +27,14 @@ namespace NerdGolfTracker
             }
         }
 
-        List<int> anzahlSchlaege = new List<int>();
+        public bool SpielAbgeschlossen
+        {
+            get
+            {
+                return _spielAbgeschlossen;
+            }
+        }
+
 
         public EinfacheScorecard()
         {
@@ -47,6 +57,11 @@ namespace NerdGolfTracker
         {
             if(anzahlSchlaege[Lochnummer - 1] > 0)
                 anzahlSchlaege[Lochnummer - 1]--;
+        }
+
+        public void SchliesseSpielAb()
+        {
+            _spielAbgeschlossen = true;
         }
     }
 }

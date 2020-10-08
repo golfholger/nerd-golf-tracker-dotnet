@@ -5,15 +5,14 @@ Scenario: Zwischenergebnisse anzeigen
 	And ich Zwischenergebnis aufrufe
 	Then zeigt der NerdGolfTracker als Zwischenergebnis 1 Schlag
 	
-	When ich den Ball noch einmal schlage
+Scenario: Zweimal schlagen und Zwischenergebnis anzeigen
+	When ich den Ball einmal schlage
+	And ich den Ball noch einmal schlage
 	And ich Zwischenergebnis aufrufe
-	Then zeigt er als Zwischenergebnis 2 Schlaege
+	Then zeigt der NerdGolfTracker als Zwischenergebnis 2 Schlaege
 
-	When ich zum naechsten Loch gehe
+Scenario: Schlagen, zum naechsten Loch gehen und Zwischenergebnis anzeigen
+	When ich den Ball einmal schlage
+	And ich zum naechsten Loch gehe
 	And ich Zwischenergebnis aufrufe
-	Then zeigt er als Zwischenergebnis 2 Schlaege
-
-	When ich den Ball noch einmal schlage
-	And ich Zwischenergebnis aufrufe
-	Then zeigt er als Zwischenergebnis 3 Schlaege
-
+	Then zeigt der NerdGolfTracker als Zwischenergebnis 1 Schlag

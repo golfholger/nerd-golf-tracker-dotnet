@@ -88,11 +88,11 @@ namespace AcceptanceTests.Features
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Schlaege zaehlen")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Einen Schlag zaehlen")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Ball schlagen")]
-        public virtual void SchlaegeZaehlen()
+        public virtual void EinenSchlagZaehlen()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Schlaege zaehlen", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Einen Schlag zaehlen", null, ((string[])(null)));
 #line 3
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -100,14 +100,25 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("ich den Ball einmal schlage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 5
  testRunner.Then("zaehlt der NerdGolfTracker 1 Schlag", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Einen zweiten Schlag zaehlen")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Ball schlagen")]
+        public virtual void EinenZweitenSchlagZaehlen()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Einen zweiten Schlag zaehlen", null, ((string[])(null)));
 #line 7
- testRunner.When("ich den Ball noch einmal schlage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
 #line 8
- testRunner.Then("zaehlt er 2 Schlaege", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 10
+ testRunner.Given("ich habe den Ball bereits einmal geschlagen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 9
  testRunner.When("ich den Ball noch einmal schlage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 11
- testRunner.Then("zaehlt er 3 Schlaege", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 10
+ testRunner.Then("zaehlt der NerdGolfTracker 2 Schlaege", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -118,12 +129,12 @@ this.ScenarioInitialize(scenarioInfo);
         public virtual void LochAnzeigen()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Loch anzeigen", null, ((string[])(null)));
-#line 13
+#line 12
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 14
+#line 13
  testRunner.When("ich den Ball einmal schlage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 15
+#line 14
  testRunner.Then("zaehlt er die Schlaege auf dem 1. Loch", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

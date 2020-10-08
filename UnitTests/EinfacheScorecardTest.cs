@@ -55,5 +55,13 @@ namespace UnitTests
             Assert.AreEqual(_scorecard.AnzahlSchlaegeAktuellesLoch, 0);
             Assert.AreEqual(_scorecard.Lochnummer, 1);
         }
+
+        [TestMethod]
+        public void SchliesseSpielAbTest()
+        {
+            Assert.AreEqual(_scorecard.SpielAbgeschlossen, false);
+            _scorecard.SchliesseSpielAb();
+            Assert.AreEqual(_scorecard.SpielAbgeschlossen, true);
+        }
     }
 }

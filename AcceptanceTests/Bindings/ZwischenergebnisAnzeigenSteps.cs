@@ -28,7 +28,7 @@ namespace AcceptanceTests.Features
             _driver.AssertThatAntwortContains("Zwischenergebnis");
         }
 
-        [Then(@"zeigt er als Zwischenergebnis (.*) Schlaege")]
+        [Then(@"zeigt der NerdGolfTracker als Zwischenergebnis (.*) Schlaege")]
         public void ThenZeigtErAlsZwischenergebnisSchlaege(int p0)
         {
             _driver.AssertThatAntwortContains("{0}", p0);

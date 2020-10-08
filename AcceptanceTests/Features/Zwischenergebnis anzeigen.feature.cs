@@ -102,24 +102,48 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("ich Zwischenergebnis aufrufe", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 6
  testRunner.Then("zeigt der NerdGolfTracker als Zwischenergebnis 1 Schlag", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Zweimal schlagen und Zwischenergebnis anzeigen")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Zwischenergebnis anzeigen")]
+        public virtual void ZweimalSchlagenUndZwischenergebnisAnzeigen()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Zweimal schlagen und Zwischenergebnis anzeigen", null, ((string[])(null)));
 #line 8
- testRunner.When("ich den Ball noch einmal schlage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
 #line 9
- testRunner.And("ich Zwischenergebnis aufrufe", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("ich den Ball einmal schlage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
- testRunner.Then("zeigt er als Zwischenergebnis 2 Schlaege", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 12
- testRunner.When("ich zum naechsten Loch gehe", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 13
+ testRunner.And("ich den Ball noch einmal schlage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 11
  testRunner.And("ich Zwischenergebnis aufrufe", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 12
+ testRunner.Then("zeigt der NerdGolfTracker als Zwischenergebnis 2 Schlaege", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Schlagen, zum naechsten Loch gehen und Zwischenergebnis anzeigen")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Zwischenergebnis anzeigen")]
+        public virtual void SchlagenZumNaechstenLochGehenUndZwischenergebnisAnzeigen()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Schlagen, zum naechsten Loch gehen und Zwischenergebnis anzeigen", null, ((string[])(null)));
 #line 14
- testRunner.Then("zeigt er als Zwischenergebnis 2 Schlaege", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 15
+ testRunner.When("ich den Ball einmal schlage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 16
- testRunner.When("ich den Ball noch einmal schlage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("ich zum naechsten Loch gehe", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
  testRunner.And("ich Zwischenergebnis aufrufe", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 18
- testRunner.Then("zeigt er als Zwischenergebnis 3 Schlaege", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("zeigt der NerdGolfTracker als Zwischenergebnis 1 Schlag", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
