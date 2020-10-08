@@ -23,6 +23,7 @@ namespace UnitTests.Operationen
         public void BeendeProgrammTest()
         {
             StringAssert.Contains(_beenden.FuehreAus(_scorecardMock.Object),"Beende");
+            _scorecardMock.Verify(x => x.SchliesseSpielAb());
         }
     }
 }

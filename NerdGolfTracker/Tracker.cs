@@ -8,21 +8,19 @@ namespace NerdGolfTracker
         private readonly Operation _startoperation;
         private readonly Scorecard _scorecard;
         private readonly Interpreter _interpreter;
-        private bool _beendenAngefordert;
 
         public Tracker(Interpreter interpreter, Operation startoperation)
         {
             _interpreter = interpreter;
             _startoperation = startoperation;
             _scorecard = new EinfacheScorecard();
-            _beendenAngefordert = false;
         }
 
         public bool BeendenAngefordert
         {
             get
             {
-                return _beendenAngefordert;
+                return _scorecard.SpielAbgeschlossen;
             }
         }
 
@@ -38,10 +36,6 @@ namespace NerdGolfTracker
 			}
 			else
 			{
-                if (operation is NerdGolfTracker.Operationen.Beenden)
-                {
-                    _beendenAngefordert = true;
-                }
 				return operation.FuehreAus(_scorecard);
 			}
         }

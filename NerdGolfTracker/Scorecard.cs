@@ -10,8 +10,12 @@ namespace NerdGolfTracker
 
         int Lochnummer { get; }
 
+        bool SpielAbgeschlossen { get; }
+
         void ErhoeheAnzahlSchlaege();
         void SchliesseLochAb();
 		void Undo();
+
+        void SchliesseSpielAb();
 	}
 }
