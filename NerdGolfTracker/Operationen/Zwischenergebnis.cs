@@ -12,7 +12,7 @@ namespace NerdGolfTracker.Operationen
         {
             return "Dein aktuelles Zwischenergebnis: "
                 + $"{scorecard.AnzahlSchlaege} "
-                + (scorecard.AnzahlSchlaege == 1 ? "Schlag" : "Schlaege");
-		}
+                + FormatHelper.SchlagNomen(scorecard.AnzahlSchlaege);
+        }
     }
 }

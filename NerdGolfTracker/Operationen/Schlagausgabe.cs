@@ -5,7 +5,7 @@ namespace NerdGolfTracker.Operationen
         public string FuehreAus(Scorecard scorecard)
         {
             return $"Du hast {scorecard.AnzahlSchlaegeAktuellesLoch} "
-                + (scorecard.AnzahlSchlaegeAktuellesLoch == 1 ? "Schlag" : "Schlaege") + " ";
+                + FormatHelper.SchlagNomen(scorecard.AnzahlSchlaegeAktuellesLoch) + " ";
         }
     }
 }
