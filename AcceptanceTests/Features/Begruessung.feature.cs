@@ -99,7 +99,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
  testRunner.When("ich den NerdGolfTracker starte", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 5
- testRunner.Then("begruesst er mich auf dem 1.Loch", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("begruesst er mich auf dem 1. Loch", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
