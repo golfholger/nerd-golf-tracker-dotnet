@@ -11,7 +11,7 @@ namespace NerdGolfTracker.Operationen
 		public string FuehreAus(Scorecard scorecard)
 		{
 			return
-				"Ein unbekannter Befehl wurde eingegeben. Verwenden Sie \"Hilfe\" für eine Übersicht der möglichen Befehle.";
+				"Ein unbekannter Befehl wurde eingegeben. Verwenden Sie \"Hilfe\" für eine Uebersicht der moeglichen Befehle.";
 		}
 	}
 }
