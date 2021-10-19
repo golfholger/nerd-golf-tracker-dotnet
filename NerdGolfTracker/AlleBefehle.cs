@@ -3,7 +3,7 @@ using NerdGolfTracker.Befehle;
 
 namespace NerdGolfTracker
 {
-    class AlleBefehle
+    public class AlleBefehle
     {
         public List<Befehl> Befehle()
         {
