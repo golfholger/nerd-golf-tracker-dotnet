@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using NerdGolfTracker.Operationen;
 
 namespace NerdGolfTracker
 {
@@ -7,7 +9,14 @@ namespace NerdGolfTracker
         public Operation OperationFuer(string kommando)
         {
             var befehle = new AlleBefehle().Befehle();
-            return befehle.Find(befehl => kommando.EndsWith(befehl.Kommando)).Operation;
+            Befehl gefundenerBefehl = befehle.FirstOrDefault(befehl => kommando.EndsWith(befehl.Kommando));
+            if (gefundenerBefehl != null)
+            {
+				return gefundenerBefehl.Operation;
+            }
+
+			return new UnbekannteEingabe();
+
         }
     }
 }
