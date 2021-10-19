@@ -28,7 +28,7 @@ namespace AcceptanceTests.Bindings
 		[Then(@"weist mich der Tracker auf die Hilfe hin")]
 		public void HinweisAufDieHilfe()
 		{
-			_driver.AssertThatAntwortContains("Übersicht der möglichen Befehle");
+			_driver.AssertThatAntwortContains("Uebersicht der moeglichen Befehle");
 			_driver.AssertThatAntwortContains("Hilfe");
 		}
 	}
