@@ -18,8 +18,6 @@ namespace UnitTests
 				.Returns("Ausgabe");
 			var tracker = new Tracker(interpreterStub.Object, null);
 			Assert.AreEqual(tracker.ReagiereAuf("Eingabe"), "Ausgabe");
-
-			Assert.AreEqual(tracker.ReagiereAuf("Loch anzeigen"), "auf dem 1.Loch");
 		}
 
 		[TestMethod]
