@@ -90,17 +90,15 @@ namespace AcceptanceTests.Features
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Unbekannte Eingabe")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Unbekannte Eingabe")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.IgnoreAttribute()]
         public virtual void UnbekannteEingabe()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Unbekannte Eingabe", null, new string[] {
-                        "ignore"});
-#line 4
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Unbekannte Eingabe", null, ((string[])(null)));
+#line 3
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 5
+#line 4
  testRunner.When("ich eine dem NerdGolfTracker unbekannte Eingabe mache", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 6
+#line 5
  testRunner.Then("weist mich der Tracker auf die Hilfe hin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

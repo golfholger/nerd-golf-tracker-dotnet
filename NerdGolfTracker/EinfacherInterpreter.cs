@@ -1,4 +1,6 @@
-﻿namespace NerdGolfTracker
+﻿using NerdGolfTracker.Operationen;
+
+namespace NerdGolfTracker
 {
 	public class EinfacherInterpreter : Interpreter
 	{
@@ -10,7 +12,7 @@
 			{
 				return gesuchterBefehl.Operation;
 			}
-			return null;
+			return new UnbekannteEingabe();
 		}
 
 		public Operation OperationFuerAlias(string alias)
@@ -22,7 +24,7 @@
 			{
 				return gesuchterBefehl.Operation;
 			}
-			return null;
+			return new UnbekannteEingabe();
 		}
 	}
 }

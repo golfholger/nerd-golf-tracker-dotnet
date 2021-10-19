@@ -59,6 +59,7 @@
     <Compile Include="Operationen\Lochwechsel.cs" />
     <Compile Include="Operationen\Schlag.cs" />
     <Compile Include="Operationen\Schlagausgabe.cs" />
+    <Compile Include="Operationen\UnbekannteEingabe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scorecard.cs" />

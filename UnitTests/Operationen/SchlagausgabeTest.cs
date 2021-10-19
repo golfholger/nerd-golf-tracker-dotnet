@@ -11,14 +11,13 @@ namespace UnitTests.Operationen
         private Mock<Scorecard> _scorecardStub;
         private Schlagausgabe _schlagausgabe;
         private Mock<Operation> _folgeOperationMock;
-            
+
         [TestInitialize]
         public void Init()
         {
             _scorecardStub = new Mock<Scorecard>();
             _folgeOperationMock = new Mock<Operation>();
             _schlagausgabe = new Schlagausgabe(_folgeOperationMock.Object);
-
         }
 
         [TestMethod]
@@ -26,6 +25,8 @@ namespace UnitTests.Operationen
         {
             _scorecardStub.Setup(scorecard => scorecard.AnzahlSchlaege).Returns(1);
             Assert.IsTrue(_schlagausgabe.FuehreAus(_scorecardStub.Object).Contains("1 Schlag"));
+            _scorecardStub.Setup(scorecard => scorecard.AnzahlSchlaege).Returns(2);
+            Assert.IsTrue(_schlagausgabe.FuehreAus(_scorecardStub.Object).Contains("2 Schlaege"));
         }
 
         [TestMethod]
