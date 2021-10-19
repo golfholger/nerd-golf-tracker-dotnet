@@ -1,19 +1,20 @@
-﻿using System.Collections.Generic;
-using NerdGolfTracker.Befehle;
+﻿using NerdGolfTracker.Befehle;
+using System.Collections.Generic;
 
 namespace NerdGolfTracker
 {
-    class AlleBefehle
-    {
-        public List<Befehl> Befehle()
-        {
-            var befehle = new List<Befehl>
-            {
-                new HilfeBefehl(),
-                new LochwechselBefehl(),
-                new SchlagBefehl()
-            };
-            return befehle;
-        }
-    }
+	class AlleBefehle
+	{
+		public List<Befehl> Befehle()
+		{
+			var befehle = new List<Befehl>
+			{
+				new HilfeBefehl(),
+				new LochwechselBefehl(),
+				new SchlagBefehl(),
+				new LochausgabeBefehl(),
+			};
+			return befehle;
+		}
+	}
 }
