@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="EinfacherInterpreterTest.cs" />
     <Compile Include="EinfacheScorecardTest.cs" />
     <Compile Include="Operationen\HilfeTest.cs" />
