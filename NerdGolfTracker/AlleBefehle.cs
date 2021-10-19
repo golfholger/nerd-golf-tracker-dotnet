@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace NerdGolfTracker
 {
-	class AlleBefehle
+	public class AlleBefehle
 	{
 		public List<Befehl> Befehle()
 		{
