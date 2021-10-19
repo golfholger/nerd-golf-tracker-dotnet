@@ -1,13 +1,14 @@
-using NerdGolfTracker.Operationen;
+﻿using NerdGolfTracker.Operationen;
 
 namespace NerdGolfTracker.Befehle
 {
-    public class SchlagBefehl : Befehl
-    {
-        public string Kommando => "Schlage Ball";
+	public class SchlagBefehl : Befehl
+	{
+		public string Kommando => "Schlage Ball";
+		public string Alias => "sb";
 
-        public Operation Operation => new Schlag(new Schlagausgabe(new Lochausgabe()));
+		public Operation Operation => new Schlag(new Schlagausgabe(new Lochausgabe()));
 
-        public string Erklaerung => "zaehlt einen Schlag";
-    }
+		public string Erklaerung => "zaehlt einen Schlag";
+	}
 }

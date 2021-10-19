@@ -1,13 +1,18 @@
-﻿using System.Collections.Generic;
-
-namespace NerdGolfTracker
+﻿namespace NerdGolfTracker
 {
-    public class EinfacherInterpreter : Interpreter
-    {
-        public Operation OperationFuer(string kommando)
-        {
-            var befehle = new AlleBefehle().Befehle();
-            return befehle.Find(befehl => kommando.EndsWith(befehl.Kommando)).Operation;
-        }
-    }
+	public class EinfacherInterpreter : Interpreter
+	{
+		public Operation OperationFuerKommando(string kommando)
+		{
+			var befehle = new AlleBefehle().Befehle();
+			return befehle.Find(befehl => kommando.EndsWith(befehl.Kommando)).Operation;
+		}
+
+		public Operation OperationFuerAlias(string alias)
+		{
+			var befehle = new AlleBefehle().Befehle();
+
+			return befehle.Find(b => alias.EndsWith(b.Alias)).Operation;
+		}
+	}
 }
