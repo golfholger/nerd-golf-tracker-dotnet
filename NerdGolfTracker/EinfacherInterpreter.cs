@@ -5,14 +5,24 @@
 		public Operation OperationFuerKommando(string kommando)
 		{
 			var befehle = new AlleBefehle().Befehle();
-			return befehle.Find(befehl => kommando.EndsWith(befehl.Kommando)).Operation;
+			Befehl gesuchterBefehl = befehle.Find(befehl => kommando.EndsWith(befehl.Kommando));
+			if (gesuchterBefehl != null)
+			{
+				return gesuchterBefehl.Operation;
+			}
+			return null;
 		}
 
 		public Operation OperationFuerAlias(string alias)
 		{
 			var befehle = new AlleBefehle().Befehle();
 
-			return befehle.Find(b => alias.EndsWith(b.Alias)).Operation;
+			Befehl gesuchterBefehl = befehle.Find(befehl => alias.EndsWith(befehl.Alias));
+			if (gesuchterBefehl != null)
+			{
+				return gesuchterBefehl.Operation;
+			}
+			return null;
 		}
 	}
 }

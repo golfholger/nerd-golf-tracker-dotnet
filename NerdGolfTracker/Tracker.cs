@@ -13,9 +13,21 @@
 			_scorecard = new EinfacheScorecard();
 		}
 
-		public string ReagiereAuf(string kommando)
+		public string ReagiereAuf(string input)
 		{
-			return _interpreter.OperationFuerKommando(kommando).FuehreAus(_scorecard);
+			Operation kommandOperation = _interpreter.OperationFuerKommando(input);
+			if (kommandOperation != null)
+			{
+				return kommandOperation.FuehreAus(_scorecard);
+			}
+
+			Operation aliasOperation = _interpreter.OperationFuerAlias(input);
+			if (aliasOperation != null)
+			{
+				return aliasOperation.FuehreAus(_scorecard);
+			}
+
+			return "Eingabe nicht bekannt";
 		}
 
 		public string Starte()

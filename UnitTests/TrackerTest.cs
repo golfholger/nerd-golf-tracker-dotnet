@@ -18,6 +18,22 @@ namespace UnitTests
 				.Returns("Ausgabe");
 			var tracker = new Tracker(interpreterStub.Object, null);
 			Assert.AreEqual(tracker.ReagiereAuf("Eingabe"), "Ausgabe");
+
+			Assert.AreEqual(tracker.ReagiereAuf("Loch anzeigen"), "auf dem 1.Loch");
+		}
+
+		[TestMethod]
+		public void GibtErgebnisDerAusgeloestenOperationZurueckAlias()
+		{
+			var interpreterStub = new Mock<Interpreter>();
+			var operationStub = new Mock<Operation>();
+			interpreterStub.Setup(interpreter => interpreter.OperationFuerAlias("e"))
+				.Returns(operationStub.Object);
+			operationStub.Setup(operation => operation.FuehreAus(It.IsAny<Scorecard>()))
+				.Returns("Ausgabe");
+			var tracker = new Tracker(interpreterStub.Object, null);
+			Assert.AreEqual(tracker.ReagiereAuf("e"), "Ausgabe");
+			Assert.AreEqual(tracker.ReagiereAuf("?"), "Eingabe nicht bekannt");
 		}
 
 		[TestMethod]
