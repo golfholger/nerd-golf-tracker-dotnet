@@ -74,6 +74,7 @@
     <Compile Include="Operationen\SchlagTest.cs" />
     <Compile Include="Operationen\UnbekannteEingabeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringCalcTest.cs" />
     <Compile Include="TrackerTest.cs" />
     <Compile Include="UnitTest1.cs" />
   </ItemGroup>

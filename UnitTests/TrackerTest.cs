@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using NerdGolfTracker;
+using NerdGolfTracker.Operationen;
 
 namespace UnitTests
 {
@@ -24,14 +25,22 @@ namespace UnitTests
 		public void GibtErgebnisDerAusgeloestenOperationZurueckAlias()
 		{
 			var interpreterStub = new Mock<Interpreter>();
-			var operationStub = new Mock<Operation>();
+			var operationStubE = new Mock<Operation>();
+			Operation unbekanntOp = new UnbekannteEingabe();
 			interpreterStub.Setup(interpreter => interpreter.OperationFuerAlias("e"))
-				.Returns(operationStub.Object);
-			operationStub.Setup(operation => operation.FuehreAus(It.IsAny<Scorecard>()))
+				.Returns(operationStubE.Object);
+			interpreterStub.Setup(interpreter => interpreter.OperationFuerKommando("e"))
+				.Returns(unbekanntOp);
+			interpreterStub.Setup(interpreter => interpreter.OperationFuerAlias("?"))
+				.Returns(unbekanntOp);
+			interpreterStub.Setup(interpreter => interpreter.OperationFuerKommando("?"))
+				.Returns(unbekanntOp);
+			operationStubE.Setup(operation => operation.FuehreAus(It.IsAny<Scorecard>()))
 				.Returns("Ausgabe");
+
 			var tracker = new Tracker(interpreterStub.Object, null);
 			Assert.AreEqual(tracker.ReagiereAuf("e"), "Ausgabe");
-			Assert.AreEqual(tracker.ReagiereAuf("?"), "Eingabe nicht bekannt");
+			Assert.AreEqual(tracker.ReagiereAuf("?"), "Ein unbekannter Befehl wurde eingegeben. Verwenden Sie \"Hilfe\" für eine Uebersicht der moeglichen Befehle.");
 		}
 
 		[TestMethod]
