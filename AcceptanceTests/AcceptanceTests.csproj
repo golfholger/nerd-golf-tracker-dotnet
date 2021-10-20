@@ -61,12 +61,15 @@
   <ItemGroup>
     <Compile Include="Bindings\ZwischenergebnisAnzeigenSteps.cs" />
     <Compile Include="Bindings\BallSchlagenSteps.cs" />
+    <Compile Include="Bindings\Gross und KleinschreibungSteps.cs" />
     <Compile Include="Bindings\HilfeSteps.cs" />
     <Compile Include="Bindings\LochwechselSteps.cs" />
     <Compile Include="Bindings\SchlaegeZaehlenSteps.cs" />
     <Compile Include="Bindings\TrackerDriverFixture.cs" />
+    <Compile Include="Bindings\UnbekannteEingabeSteps.cs" />
     <Compile Include="Features\Ball schlagen.feature.cs" />
     <Compile Include="Features\Begruessung.feature.cs" />
+    <Compile Include="Features\Gross und Kleinschreibung.feature.cs" />
     <Compile Include="Features\Hilfe.feature.cs" />
     <Compile Include="Features\Lochwechsel.feature.cs" />
     <Compile Include="Features\Unbekannte Eingabe.feature.cs" />
@@ -78,9 +81,11 @@
     <None Include="App.config" />
     <None Include="Features\Ball schlagen.feature" />
     <None Include="Features\Begruessung.feature" />
+    <None Include="Features\Gross und Kleinschreibung.feature" />
     <None Include="Features\Hilfe.feature" />
     <None Include="Features\Zwischenergebnis.feature" />
     <None Include="Features\Lochwechsel.feature" />
+    <None Include="Features\Scorecard.feature" />
     <None Include="Features\Unbekannte Eingabe.feature" />
     <None Include="packages.config" />
   </ItemGroup>

@@ -11,16 +11,19 @@ namespace UnitTests
 		[TestMethod]
 		public void FindetAlleOperationenZubefehlen()
 		{
-			FindetOperation("Naechstes Loch", typeof(Lochwechsel));
-			FindetOperation("Schlage Ball", typeof(Schlag));
-			FindetOperation("Hilfe", typeof(Hilfe));
-			FindetOperation("Loch anzeigen", typeof(Lochausgabe));
+			FindetOperation("Naechstes Loch", "nl", typeof(Lochwechsel));
+			FindetOperation("Schlage Ball", "sb", typeof(Schlag));
+			FindetOperation("Hilfe", "h", typeof(Hilfe));
+			FindetOperation("Loch anzeigen", "la", typeof(Lochausgabe));
+			FindetOperation("Irgendwas", "Irgendwas", typeof(UnbekannteEingabe));
+			FindetOperation("", "", typeof(UnbekannteEingabe));
 		}
 
-		public void FindetOperation(string kommando, Type operationstyp)
+		public void FindetOperation(string kommando, string alias, Type operationstyp)
 		{
 			Interpreter interpreter = new EinfacherInterpreter();
-			Assert.IsInstanceOfType(interpreter.OperationFuer(kommando), operationstyp);
+			Assert.IsInstanceOfType(interpreter.OperationFuerKommando(kommando), operationstyp);
+			Assert.IsInstanceOfType(interpreter.OperationFuerAlias(alias), operationstyp);
 		}
 	}
 }
