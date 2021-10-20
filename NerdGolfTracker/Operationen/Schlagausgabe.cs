@@ -12,8 +12,8 @@ namespace NerdGolfTracker.Operationen
         public string FuehreAus(Scorecard scorecard)
         {
             string schlagWort = "Schlag";
-            if (scorecard.AnzahlSchlaege > 1) schlagWort = "Schlaege";
-            return $"Du hast {scorecard.AnzahlSchlaege} {schlagWort} {_folgeOperation.FuehreAus(scorecard)}";
+            if (scorecard.GetAnzahlSchlaege() > 1) schlagWort = "Schlaege";
+            return $"Du hast {scorecard.GetAnzahlSchlaege()} {schlagWort} {_folgeOperation.FuehreAus(scorecard)}";
         }
     }
 }

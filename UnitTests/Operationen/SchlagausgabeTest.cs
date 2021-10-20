@@ -25,7 +25,7 @@ namespace UnitTests.Operationen
         {
             _scorecardStub.Setup(scorecard => scorecard.GetAnzahlSchlaege()).Returns(1);
             Assert.IsTrue(_schlagausgabe.FuehreAus(_scorecardStub.Object).Contains("1 Schlag"));
-            _scorecardStub.Setup(scorecard => scorecard.AnzahlSchlaege).Returns(2);
+            _scorecardStub.Setup(scorecard => scorecard.GetAnzahlSchlaege()).Returns(2);
             Assert.IsTrue(_schlagausgabe.FuehreAus(_scorecardStub.Object).Contains("2 Schlaege"));
         }
 
