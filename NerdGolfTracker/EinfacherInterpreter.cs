@@ -1,4 +1,5 @@
-﻿using NerdGolfTracker.Operationen;
+﻿using System;
+using NerdGolfTracker.Operationen;
 
 namespace NerdGolfTracker
 {
@@ -7,7 +8,7 @@ namespace NerdGolfTracker
 		public Operation OperationFuerKommando(string kommando)
 		{
 			var befehle = new AlleBefehle().Befehle();
-			Befehl gesuchterBefehl = befehle.Find(befehl => kommando.EndsWith(befehl.Kommando));
+			Befehl gesuchterBefehl = befehle.Find(befehl => kommando.EndsWith(befehl.Kommando, StringComparison.InvariantCultureIgnoreCase));
 			if (gesuchterBefehl != null)
 			{
 				return gesuchterBefehl.Operation;
@@ -19,7 +20,7 @@ namespace NerdGolfTracker
 		{
 			var befehle = new AlleBefehle().Befehle();
 
-			Befehl gesuchterBefehl = befehle.Find(befehl => alias.EndsWith(befehl.Alias));
+			Befehl gesuchterBefehl = befehle.Find(befehl => alias.EndsWith(befehl.Alias, StringComparison.InvariantCultureIgnoreCase));
 			if (gesuchterBefehl != null)
 			{
 				return gesuchterBefehl.Operation;
