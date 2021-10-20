@@ -11,7 +11,7 @@ namespace NerdGolfTracker.Operationen
 
         public string FuehreAus(Scorecard scorecard)
         {
-            return $"Du hast {scorecard.AnzahlSchlaege} Schlag {_folgeOperation.FuehreAus(scorecard)}";
+            return $"Du hast {scorecard.GetAnzahlSchlaege()} Schlag {_folgeOperation.FuehreAus(scorecard)}";
         }
     }
 }

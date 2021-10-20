@@ -18,7 +18,7 @@ namespace UnitTests
         public void InkrementiertSchlagzahlEinmal()
         {
             _scorecard.ErhoeheAnzahlSchlaege();
-            Assert.AreEqual(_scorecard.AnzahlSchlaege, 1);
+            Assert.AreEqual(_scorecard.GetAnzahlSchlaege(), 1);
         }
 
         [TestMethod]
@@ -26,14 +26,14 @@ namespace UnitTests
         {
             _scorecard.ErhoeheAnzahlSchlaege();
             _scorecard.ErhoeheAnzahlSchlaege();
-            Assert.AreEqual(_scorecard.AnzahlSchlaege, 2);
+            Assert.AreEqual(_scorecard.GetAnzahlSchlaege(), 2);
         }
 
         [TestMethod]
         public void ErhoehtLochnummerBeiLochwechsel()
         {
             _scorecard.SchliesseLochAb();
-            Assert.AreEqual(_scorecard.Lochnummer, 2);
+            Assert.AreEqual(_scorecard.GetLochnummer(), 2);
         }
     }
 }

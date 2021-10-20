@@ -10,11 +10,12 @@
 
 			}
 
-			if (scorecard.Lochnummer < 1)
+			if (scorecard.GetLochnummer() < 1)
 			{
 				return "Die Lochnummer ist ungültig";
 			}
-			return $"auf dem {scorecard.Lochnummer}.Loch.";
+
+			return $"auf dem {scorecard.GetLochnummer()}.Loch.";
 		}
 	}
 }

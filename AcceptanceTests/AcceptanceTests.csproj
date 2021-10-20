@@ -59,6 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bindings\ZwischenergebnisAnzeigenSteps.cs" />
     <Compile Include="Bindings\BallSchlagenSteps.cs" />
     <Compile Include="Bindings\HilfeSteps.cs" />
     <Compile Include="Bindings\LochwechselSteps.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Features\Hilfe.feature.cs" />
     <Compile Include="Features\Lochwechsel.feature.cs" />
     <Compile Include="Features\Unbekannte Eingabe.feature.cs" />
+    <Compile Include="Features\Zwischenergebnis.feature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TrackerDriver.cs" />
   </ItemGroup>
@@ -77,6 +79,7 @@
     <None Include="Features\Ball schlagen.feature" />
     <None Include="Features\Begruessung.feature" />
     <None Include="Features\Hilfe.feature" />
+    <None Include="Features\Zwischenergebnis.feature" />
     <None Include="Features\Lochwechsel.feature" />
     <None Include="Features\Unbekannte Eingabe.feature" />
     <None Include="packages.config" />
