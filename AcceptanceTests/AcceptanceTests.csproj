@@ -79,6 +79,7 @@
     <None Include="Features\Begruessung.feature" />
     <None Include="Features\Hilfe.feature" />
     <None Include="Features\Lochwechsel.feature" />
+    <None Include="Features\Scorecard.feature" />
     <None Include="Features\Unbekannte Eingabe.feature" />
     <None Include="packages.config" />
   </ItemGroup>
